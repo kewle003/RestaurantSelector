@@ -58,10 +58,6 @@ public class User {
         this.favRestaurants = favRestaurants;
     }
     
-    public void setFavoriteRestaurant(List<Restaurant> newList) {
-        this.favRestaurants = newList;
-    }
-    
     public Role getRole() {
         return role;
     }
@@ -81,7 +77,8 @@ public class User {
     public void updateRestaurants(List<Restaurant> newList) {
         if (favRestaurants != null && newList != null) {
             for ( Restaurant newRest : newList ) {
-                favRestaurants.add(newRest);
+                if (!favRestaurants.contains(newRest))
+                    favRestaurants.add(newRest);
             }
         }
     }

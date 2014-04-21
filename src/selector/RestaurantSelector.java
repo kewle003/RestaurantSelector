@@ -10,6 +10,7 @@ import selectorData.User;
 import selectorDatabase.DatabaseManager;
 import selectorExceptions.InvalidDataException;
 import selectorExceptions.InvalidLoginException;
+import selectorExceptions.NoDataFoundException;
 
 
 public class RestaurantSelector implements RestaurantSelectorInterface {
@@ -98,6 +99,18 @@ public class RestaurantSelector implements RestaurantSelectorInterface {
             return true;
         else
             return false;
+    }
+    
+    @Override
+    public void updateFavoriteRestaurant(List<Restaurant> newRestaurants) throws Exception {
+        List<User> userList = (List<User>) users.values();
+        if (userList.remove(user)) {
+            user.updateRestaurants(newRestaurants);
+            userList.add(user);
+            updateUserDatabase(userList);
+        } else {
+            throw new NoDataFoundException("User: " +user.getUserId()+ " not found!");
+        }
     }
 
 

@@ -2,6 +2,7 @@ package selector;
 
 import java.util.List;
 
+import selectorData.Restaurant;
 import selectorData.User;
 
 public interface RestaurantSelectorInterface {
@@ -44,6 +45,16 @@ public interface RestaurantSelectorInterface {
      * @return
      */
     public String makeSelection();
+    
+    /**
+     * 
+     * This update's the user who is logged in
+     * database.
+     * 
+     * @param newRestaurants
+     * @throws Exception
+     */
+    public void updateFavoriteRestaurant(List<Restaurant> newRestaurants) throws Exception;
     
     /**
      * 
