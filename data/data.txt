@@ -1,0 +1,42 @@
+[
+    {
+            "userId": 0,
+            "userName": "Mark Kewley",
+            "address": {
+                "street": "10150 205th Ct W",
+                "city": "Lakeville",
+                "state": "MN",
+                "zipcode": 55044
+            },
+            "favRestaurants": [
+                {
+                    "restaurantName": "El Toro",
+                    "location": "MN",
+                    "address": {
+                        "street": "4109 Lakeland Ave N",
+                        "city": "Minneapolis",
+                        "state": "MN",
+                        "zipcode": 55422,
+                        "phoneNumber": "763 547-6822"
+                    }
+                },
+                {
+                    "restaurantName": "Olive Garden",
+                    "location": "MN",
+                    "address": {
+                        "street": "5235 Wayzata Blvd",
+                        "city": "St Louis Park",
+                        "state": "MN",
+                        "zipcode": 55416,
+                        "phoneNumber": "952 544-4423"
+                    } 
+                }
+            ],
+            "role": "ADMIN"
+            
+    },
+    {
+            "userId": 1,
+            "userName": "Kaira Miller"
+    }
+]
